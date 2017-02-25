@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Monster Wiki Legends</string>
+    <string name="creer">Créer tes monstres</string>
+    <string name="liste">Bestiaire</string>
+    <string name="quitter">Quitter</string>
+    <string name="retour">Retour</string>
+</resources>
