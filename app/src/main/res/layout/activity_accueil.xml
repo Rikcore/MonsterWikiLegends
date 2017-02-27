@@ -15,7 +15,7 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/entete"
+        app:srcCompat="@drawable/entete_burned"
         android:id="@+id/entete"
         android:layout_marginBottom="314dp"
         android:layout_alignParentBottom="true"
@@ -25,15 +25,15 @@
 
     <Button
         android:text="@string/quitter"
-        android:textColor="#2CD12C"
+        android:textColor="#0D2409"
         android:textSize="20sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/buttonshape"
-        android:shadowColor="#409929"
-        android:shadowDx="7"
-        android:shadowDy="8"
-        android:shadowRadius="11"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="14dp"
@@ -48,8 +48,15 @@
         android:id="@+id/creer"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:textColor="#2CD12C"
+        android:textColor="#0D2409"
         android:textSize="20sp"
+        android:background="@drawable/buttonshape"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
         />
 
     <Button
@@ -58,5 +65,16 @@
         android:layout_height="wrap_content"
         android:id="@+id/liste"
         android:layout_below="@+id/creer"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="44dp"
+        android:textColor="#0D2409"
+        android:textSize="20sp"
+        android:background="@drawable/buttonshape"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"/>
+
 </RelativeLayout>

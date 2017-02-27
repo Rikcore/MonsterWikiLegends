@@ -23,6 +23,8 @@ public class Accueil extends AppCompatActivity {
         creer = (Button) findViewById(R.id.creer);
         liste = (Button) findViewById(R.id.liste);
 
+
+
         creer.setOnClickListener(new View.OnClickListener()
         {
             @Override
