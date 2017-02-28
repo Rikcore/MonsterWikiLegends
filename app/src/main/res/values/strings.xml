@@ -7,4 +7,5 @@
     <string name="nommer">Choisis le nom de ton monstre.</string>
     <string name="element">Choisis ton élément.</string>
     <string name="valider">Valider</string>
+    <string name="renseigner">Tu dois donner un nom à ton monstre !</string>
 </resources>

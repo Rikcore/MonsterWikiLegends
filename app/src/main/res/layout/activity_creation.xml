@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_creation"
     android:layout_width="match_parent"
@@ -12,187 +13,156 @@
 
     tools:context="wildentertainmentsas.monsterwikilegends.Creation">
 
+
+    <Button
+        android:text="@string/retour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/retour"
+        android:textColor="#0D2409"
+        android:textSize="20sp"
+        android:background="@drawable/buttonshape"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:onClick="onClick"
+        />
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/metal"
+        android:id="@+id/metal"
+        android:onClick="onClick"
+        android:layout_alignTop="@+id/nature"
+        android:layout_alignLeft="@+id/special"
+        android:layout_alignStart="@+id/special" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/mort"
+        android:id="@+id/mort"
+        android:onClick="onClick"
+        android:layout_above="@+id/metal"
+        android:layout_alignLeft="@+id/metal"
+        android:layout_alignStart="@+id/metal" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/foudre"
+        android:id="@+id/foudre"
+        android:onClick="onClick"
+        android:layout_above="@+id/mort"
+        android:layout_alignLeft="@+id/mort"
+        android:layout_alignStart="@+id/mort" />
+
     <TextView
         android:text="@string/nommer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/textView3"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/textViewNommer"
-        android:textSize="20dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp">
-
-    </TextView>
+        android:layout_alignRight="@+id/textViewElement"
+        android:layout_alignEnd="@+id/textViewElement" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:layout_below="@+id/textViewNommer"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
-        android:id="@+id/edittextnommer" />
+        android:id="@+id/editTextNom"
+        android:layout_below="@+id/textView3"
+        android:layout_alignLeft="@+id/textViewElement"
+        android:layout_alignStart="@+id/textViewElement" />
 
     <TextView
         android:text="@string/element"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/edittextnommer"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
         android:textSize="20dp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        android:id="@+id/textViewElement" />
+        android:id="@+id/textViewElement"
+        android:layout_below="@+id/editTextNom"
+        android:layout_centerHorizontal="true" />
 
-
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/radioButton18"
-            android:layout_alignLeft="@+id/radioButton18"
-            android:layout_alignStart="@+id/radioButton18"
-            android:layout_marginTop="16dp"
-            android:id="@+id/radioButton20"
-            android:button="@drawable/foudre"
-            android:text="  Foudre" />
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/radioButton20"
-            android:layout_alignLeft="@+id/radioButton19"
-            android:layout_alignStart="@+id/radioButton19"
-            android:id="@+id/radioButton21"
-            android:button="@drawable/lumiere"
-            android:text="  Lumière" />
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/radioButton22"
-            android:layout_alignLeft="@+id/radioButton21"
-            android:layout_alignStart="@+id/radioButton21"
-            android:id="@+id/radioButton23"
-            android:button="@drawable/magie"
-            android:text="  Magie" />
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:id="@+id/radioButton22"
-            android:layout_below="@+id/radioButton20"
-            android:layout_alignLeft="@+id/radioButton20"
-            android:layout_alignStart="@+id/radioButton20"
-            android:button="@drawable/metal"
-            android:text="  Métal" />
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/radioButton22"
-            android:layout_alignLeft="@+id/radioButton22"
-            android:layout_alignStart="@+id/radioButton22"
-            android:layout_marginTop="14dp"
-            android:id="@+id/radioButton24"
-            android:button="@drawable/mort"
-            android:text="  Mort" />
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/radioButton24"
-            android:layout_alignLeft="@+id/radioButton24"
-            android:layout_alignStart="@+id/radioButton24"
-            android:layout_marginTop="15dp"
-            android:id="@+id/radioButton26"
-            android:button="@drawable/special"
-            android:text="  Spécial" />
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="23dp"
-            android:id="@+id/radioButton18"
-            android:button="@drawable/feu"
-            android:text="  Feu"
-            android:layout_below="@+id/textViewElement"
-            android:layout_alignLeft="@+id/textViewElement"
-            android:layout_alignStart="@+id/textViewElement" />
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/radioButton19"
-            android:button="@drawable/eau"
-            android:text="  Eau"
-            android:layout_above="@+id/radioButton20"
-            android:layout_alignRight="@+id/edittextnommer"
-            android:layout_alignEnd="@+id/edittextnommer" />
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/radioButton27"
-            android:button="@drawable/terre"
-            android:text="  Terre"
-            android:layout_alignBaseline="@+id/radioButton26"
-            android:layout_alignBottom="@+id/radioButton26"
-            android:layout_alignLeft="@+id/radioButton25"
-            android:layout_alignStart="@+id/radioButton25" />
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/radioButton25"
-            android:button="@drawable/nature"
-            android:text="  Nature"
-            android:layout_above="@+id/radioButton26"
-            android:layout_alignLeft="@+id/radioButton23"
-            android:layout_alignStart="@+id/radioButton23" />
-
-
-
-    <Button
-        android:text="@string/retour"
+    <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/retour"
-        android:textColor="#0D2409"
-        android:textSize="15sp"
-        android:background="@drawable/buttonshape"
-        android:shadowColor="#A8A8A8"
-        android:shadowDx="0"
-        android:shadowDy="0"
-        android:shadowRadius="5"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/radioButton21"
-        android:layout_alignEnd="@+id/radioButton21" />
+        app:srcCompat="@drawable/special"
+        android:id="@+id/special"
+        android:onClick="onClick"
+        android:layout_alignTop="@+id/feu"
+        android:layout_toRightOf="@+id/retour"
+        android:layout_toEndOf="@+id/retour" />
 
-    <Button
-        android:text="@string/valider"
+    <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/radioButton18"
-        android:layout_alignEnd="@+id/radioButton18"
-        android:id="@+id/valider"
-        android:textColor="#0D2409"
-        android:textSize="15sp"
-        android:background="@drawable/buttonshape"
-        android:shadowColor="#A8A8A8"
-        android:shadowDx="0"
-        android:shadowDy="0"
-        android:shadowRadius="5"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        />
+        app:srcCompat="@drawable/terre"
+        android:id="@+id/terre"
+        android:onClick="onClick"
+        android:layout_marginBottom="11dp"
+        android:layout_above="@+id/retour"
+        android:layout_alignLeft="@+id/feu"
+        android:layout_alignStart="@+id/feu" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/feu"
+        android:id="@+id/feu"
+        android:onClick="onClick"
+        android:layout_above="@+id/terre"
+        android:layout_alignLeft="@+id/nature"
+        android:layout_alignStart="@+id/nature" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/magie"
+        android:id="@+id/magie"
+        android:onClick="onClick"
+        android:layout_above="@+id/lumiere"
+        android:layout_alignLeft="@+id/textViewElement"
+        android:layout_alignStart="@+id/textViewElement" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/lumiere"
+        android:id="@+id/lumiere"
+        android:onClick="onclick"
+        android:layout_above="@+id/nature"
+        android:layout_alignLeft="@+id/magie"
+        android:layout_alignStart="@+id/magie" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/nature"
+        android:id="@+id/nature"
+        android:onClick="onClick"
+        android:layout_above="@+id/special"
+        android:layout_alignLeft="@+id/lumiere"
+        android:layout_alignStart="@+id/lumiere" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/eau"
+        android:id="@+id/eau"
+        android:onClick="onClick"
+        android:layout_below="@+id/special"
+        android:layout_alignLeft="@+id/special"
+        android:layout_alignStart="@+id/special" />
 
 
 </RelativeLayout>

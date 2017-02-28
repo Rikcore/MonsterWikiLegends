@@ -17,7 +17,8 @@
         </activity>
         <activity android:name=".Creation" />
         <activity android:name=".Bestiaire" />
-        <activity android:name=".VisualiserMonstres"></activity>
+        <activity android:name=".VisualiserMonstres" />
+        <activity android:name=".Creation2"></activity>
     </application>
 
 </manifest>
