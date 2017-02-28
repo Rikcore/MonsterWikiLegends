@@ -16,7 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Creation" />
-        <activity android:name=".Bestiaire"></activity>
+        <activity android:name=".Bestiaire" />
+        <activity android:name=".VisualiserMonstres"></activity>
     </application>
 
 </manifest>

@@ -12,12 +12,187 @@
 
     tools:context="wildentertainmentsas.monsterwikilegends.Creation">
 
+    <TextView
+        android:text="@string/nommer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textViewNommer"
+        android:textSize="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+    </TextView>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/textViewNommer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:id="@+id/edittextnommer" />
+
+    <TextView
+        android:text="@string/element"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edittextnommer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:id="@+id/textViewElement" />
+
+
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/radioButton18"
+            android:layout_alignLeft="@+id/radioButton18"
+            android:layout_alignStart="@+id/radioButton18"
+            android:layout_marginTop="16dp"
+            android:id="@+id/radioButton20"
+            android:button="@drawable/foudre"
+            android:text="  Foudre" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/radioButton20"
+            android:layout_alignLeft="@+id/radioButton19"
+            android:layout_alignStart="@+id/radioButton19"
+            android:id="@+id/radioButton21"
+            android:button="@drawable/lumiere"
+            android:text="  Lumière" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/radioButton22"
+            android:layout_alignLeft="@+id/radioButton21"
+            android:layout_alignStart="@+id/radioButton21"
+            android:id="@+id/radioButton23"
+            android:button="@drawable/magie"
+            android:text="  Magie" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:id="@+id/radioButton22"
+            android:layout_below="@+id/radioButton20"
+            android:layout_alignLeft="@+id/radioButton20"
+            android:layout_alignStart="@+id/radioButton20"
+            android:button="@drawable/metal"
+            android:text="  Métal" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/radioButton22"
+            android:layout_alignLeft="@+id/radioButton22"
+            android:layout_alignStart="@+id/radioButton22"
+            android:layout_marginTop="14dp"
+            android:id="@+id/radioButton24"
+            android:button="@drawable/mort"
+            android:text="  Mort" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/radioButton24"
+            android:layout_alignLeft="@+id/radioButton24"
+            android:layout_alignStart="@+id/radioButton24"
+            android:layout_marginTop="15dp"
+            android:id="@+id/radioButton26"
+            android:button="@drawable/special"
+            android:text="  Spécial" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:id="@+id/radioButton18"
+            android:button="@drawable/feu"
+            android:text="  Feu"
+            android:layout_below="@+id/textViewElement"
+            android:layout_alignLeft="@+id/textViewElement"
+            android:layout_alignStart="@+id/textViewElement" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton19"
+            android:button="@drawable/eau"
+            android:text="  Eau"
+            android:layout_above="@+id/radioButton20"
+            android:layout_alignRight="@+id/edittextnommer"
+            android:layout_alignEnd="@+id/edittextnommer" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton27"
+            android:button="@drawable/terre"
+            android:text="  Terre"
+            android:layout_alignBaseline="@+id/radioButton26"
+            android:layout_alignBottom="@+id/radioButton26"
+            android:layout_alignLeft="@+id/radioButton25"
+            android:layout_alignStart="@+id/radioButton25" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton25"
+            android:button="@drawable/nature"
+            android:text="  Nature"
+            android:layout_above="@+id/radioButton26"
+            android:layout_alignLeft="@+id/radioButton23"
+            android:layout_alignStart="@+id/radioButton23" />
+
+
+
     <Button
         android:text="@string/retour"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/retour"
+        android:textColor="#0D2409"
+        android:textSize="15sp"
+        android:background="@drawable/buttonshape"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="24dp"
-        android:id="@+id/retour" />
+        android:layout_alignRight="@+id/radioButton21"
+        android:layout_alignEnd="@+id/radioButton21" />
+
+    <Button
+        android:text="@string/valider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/radioButton18"
+        android:layout_alignEnd="@+id/radioButton18"
+        android:id="@+id/valider"
+        android:textColor="#0D2409"
+        android:textSize="15sp"
+        android:background="@drawable/buttonshape"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        />
+
+
 </RelativeLayout>

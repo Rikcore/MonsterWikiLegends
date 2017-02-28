@@ -4,4 +4,7 @@
     <string name="liste">Bestiaire</string>
     <string name="quitter">Quitter</string>
     <string name="retour">Retour</string>
+    <string name="nommer">Choisis le nom de ton monstre.</string>
+    <string name="element">Choisis ton élément.</string>
+    <string name="valider">Valider</string>
 </resources>
