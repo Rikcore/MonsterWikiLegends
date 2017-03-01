@@ -3,14 +3,19 @@ package wildentertainmentsas.monsterwikilegends;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+
+
 
 
 public class Bestiaire extends AppCompatActivity {
@@ -59,6 +64,23 @@ public class Bestiaire extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 finish();
+            }
+        });
+
+        bestiaireListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Monstres obj = (Monstres) arrayadapter.getItem(position);
+
+                Intent godetails = new Intent(Bestiaire.this, VisualiserMonstres.class);
+                godetails.putExtra("obj",obj);
+                startActivity(godetails);
+
+
+
+
+
+
             }
         });
 

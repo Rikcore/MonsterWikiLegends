@@ -72,7 +72,7 @@ public class Creation2 extends AppCompatActivity {
                 imageView.setImageResource(R.drawable.treezard_0);
                 break;
             case 8:
-                imageView.setImageResource(R.drawable.panda_0);
+                imageView.setImageResource(R.drawable.tyrannoking_0);
                 break;
             case 9:
                 imageView.setImageResource(R.drawable.tyrannoking_0);

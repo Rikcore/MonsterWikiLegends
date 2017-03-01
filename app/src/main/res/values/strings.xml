@@ -12,5 +12,6 @@
     <string name="forcestats">Tu dois donner des points à chaque catégorie.</string>
     <string name="felicitations">Monstre enregistré BITCH !!!</string>
     <string name="forcercreation">Tu dois d\'abord créer ton premier monstre !</string>
-    <string name="detype">de type :</string>
+    <string name="detype"></string>
+
 </resources>
