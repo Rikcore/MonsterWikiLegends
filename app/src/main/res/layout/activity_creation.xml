@@ -139,7 +139,7 @@
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/lumiere"
         android:id="@+id/lumiere"
-        android:onClick="onclick"
+        android:onClick="onClick"
         android:layout_above="@+id/nature"
         android:layout_alignLeft="@+id/magie"
         android:layout_alignStart="@+id/magie" />

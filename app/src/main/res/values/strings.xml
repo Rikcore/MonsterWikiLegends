@@ -8,4 +8,9 @@
     <string name="element">Choisis ton élément.</string>
     <string name="valider">Valider</string>
     <string name="renseigner">Tu dois donner un nom à ton monstre !</string>
+    <string name="determine">Détermine les statistiques de </string>
+    <string name="forcestats">Tu dois donner des points à chaque catégorie.</string>
+    <string name="felicitations">Monstre enregistré BITCH !!!</string>
+    <string name="forcercreation">Tu dois d\'abord créer ton premier monstre !</string>
+    <string name="detype">de type :</string>
 </resources>
