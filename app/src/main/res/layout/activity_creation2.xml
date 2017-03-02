@@ -30,7 +30,10 @@
         android:layout_alignBottom="@+id/imageView2"
         android:layout_toRightOf="@+id/imageView2"
         android:layout_toEndOf="@+id/imageView2"
-        android:id="@+id/editTextLife" />
+        android:id="@+id/editTextLife"
+        android:hint="@string/Vie"
+        android:gravity="center_horizontal"
+        android:maxLength="3"/>
 
     <ImageView
         android:layout_width="wrap_content"
@@ -50,7 +53,11 @@
         android:layout_alignBottom="@+id/imageViewStamina"
         android:layout_toRightOf="@+id/imageView2"
         android:layout_toEndOf="@+id/imageView2"
-        android:id="@+id/editTextStamina" />
+        android:id="@+id/editTextStamina"
+        android:hint="@string/Stamina"
+        android:gravity="center_horizontal"
+        android:maxLength="3"
+        />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -70,7 +77,10 @@
         android:layout_alignTop="@+id/imageViewPower"
         android:layout_alignLeft="@+id/editTextStamina"
         android:layout_alignStart="@+id/editTextStamina"
-        android:id="@+id/editTextPower" />
+        android:id="@+id/editTextPower"
+        android:hint="@string/Puissance"
+        android:gravity="center_horizontal"
+        android:maxLength="3"/>
 
     <ImageView
         android:layout_width="wrap_content"
@@ -90,7 +100,10 @@
         android:layout_alignTop="@+id/imageViewSpeed"
         android:layout_alignLeft="@+id/editTextPower"
         android:layout_alignStart="@+id/editTextPower"
-        android:id="@+id/editTextSpeed" />
+        android:id="@+id/editTextSpeed"
+        android:hint="@string/Vitesse"
+        android:gravity="center_horizontal"
+        android:maxLength="3"/>
 
     <ImageView
         android:layout_width="wrap_content"
@@ -116,9 +129,6 @@
         android:text="@string/valider"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/imageView"
-        android:layout_alignEnd="@+id/imageView"
         android:id="@+id/valider"
         android:onClick="onClick"
         android:textColor="#0D2409"
@@ -129,6 +139,8 @@
         android:shadowDy="0"
         android:shadowRadius="5"
         android:paddingLeft="20dp"
-        android:paddingRight="20dp"/>
+        android:paddingRight="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

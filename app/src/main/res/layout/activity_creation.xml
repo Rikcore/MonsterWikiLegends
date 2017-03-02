@@ -18,9 +18,6 @@
         android:text="@string/retour"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20dp"
         android:id="@+id/retour"
         android:textColor="#0D2409"
         android:textSize="20sp"
@@ -32,55 +29,8 @@
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:onClick="onClick"
-        />
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/metal"
-        android:id="@+id/metal"
-        android:onClick="onClick"
-        android:layout_alignTop="@+id/nature"
-        android:layout_alignLeft="@+id/special"
-        android:layout_alignStart="@+id/special" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/mort"
-        android:id="@+id/mort"
-        android:onClick="onClick"
-        android:layout_above="@+id/metal"
-        android:layout_alignLeft="@+id/metal"
-        android:layout_alignStart="@+id/metal" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/foudre"
-        android:id="@+id/foudre"
-        android:onClick="onClick"
-        android:layout_above="@+id/mort"
-        android:layout_alignLeft="@+id/mort"
-        android:layout_alignStart="@+id/mort" />
-
-    <TextView
-        android:text="@string/nommer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView3"
-        android:layout_alignParentTop="true"
-        android:layout_alignRight="@+id/textViewElement"
-        android:layout_alignEnd="@+id/textViewElement" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/editTextNom"
-        android:layout_below="@+id/textView3"
-        android:layout_alignLeft="@+id/textViewElement"
-        android:layout_alignStart="@+id/textViewElement" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:text="@string/element"
@@ -91,78 +41,225 @@
         android:paddingRight="10dp"
         android:id="@+id/textViewElement"
         android:layout_below="@+id/editTextNom"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rounded_corner"
+        android:layout_marginBottom="15dp"/>
+
+    <TextView
+        android:text="@string/nommer"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:textStyle="bold"
+        android:background="@drawable/rounded_corner"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textCapWords"
+        android:hint="@string/Nom"
+        android:gravity="center_horizontal"
+        android:ems="10"
+        android:id="@+id/editTextNom"
+        android:maxLength="15"
+        android:layout_below="@+id/textView3"
         android:layout_centerHorizontal="true" />
 
     <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/special"
-        android:id="@+id/special"
-        android:onClick="onClick"
-        android:layout_alignTop="@+id/feu"
-        android:layout_toRightOf="@+id/retour"
-        android:layout_toEndOf="@+id/retour" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/terre"
-        android:id="@+id/terre"
-        android:onClick="onClick"
-        android:layout_marginBottom="11dp"
-        android:layout_above="@+id/retour"
-        android:layout_alignLeft="@+id/feu"
-        android:layout_alignStart="@+id/feu" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/feu"
-        android:id="@+id/feu"
-        android:onClick="onClick"
-        android:layout_above="@+id/terre"
-        android:layout_alignLeft="@+id/nature"
-        android:layout_alignStart="@+id/nature" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/magie"
-        android:id="@+id/magie"
-        android:onClick="onClick"
-        android:layout_above="@+id/lumiere"
-        android:layout_alignLeft="@+id/textViewElement"
-        android:layout_alignStart="@+id/textViewElement" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/lumiere"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:srcCompat="@drawable/lumierexl"
         android:id="@+id/lumiere"
         android:onClick="onClick"
-        android:layout_above="@+id/nature"
-        android:layout_alignLeft="@+id/magie"
-        android:layout_alignStart="@+id/magie" />
+        android:layout_alignTop="@+id/special"
+        android:layout_alignRight="@+id/textView3"
+        android:layout_alignEnd="@+id/textView3" />
 
     <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/nature"
-        android:id="@+id/nature"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:srcCompat="@drawable/magiexl"
+        android:id="@+id/magie"
         android:onClick="onClick"
-        android:layout_above="@+id/special"
+        android:layout_below="@+id/textViewElement"
+        android:layout_alignLeft="@+id/foudre"
+        android:layout_alignStart="@+id/foudre"
+        android:layout_marginTop="15dp" />
+
+    <ImageButton
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:srcCompat="@drawable/terrexl"
+        android:id="@+id/terre"
+        android:onClick="onClick"
+        android:layout_alignBottom="@+id/metal"
         android:layout_alignLeft="@+id/lumiere"
         android:layout_alignStart="@+id/lumiere" />
 
     <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/eau"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:srcCompat="@drawable/specialxl"
+        android:id="@+id/special"
+        android:onClick="onClick"
+        android:layout_alignTop="@+id/magie"
+        android:layout_alignLeft="@+id/nature"
+        android:layout_alignStart="@+id/nature" />
+
+    <ImageButton
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:srcCompat="@drawable/eauxl"
         android:id="@+id/eau"
         android:onClick="onClick"
+        android:layout_below="@+id/nature"
+        android:layout_alignLeft="@+id/nature"
+        android:layout_alignStart="@+id/nature"
+        android:layout_marginTop="16dp" />
+
+    <ImageButton
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:srcCompat="@drawable/foudrexl"
+        android:id="@+id/foudre"
+        android:onClick="onClick"
+        android:layout_alignTop="@+id/eau"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:srcCompat="@drawable/feuxl"
+        android:id="@+id/feu"
+        android:onClick="onClick"
+        android:layout_alignTop="@+id/foudre"
+        android:layout_alignLeft="@+id/terre"
+        android:layout_alignStart="@+id/terre" />
+
+    <TextView
+        android:text="@string/typeMagie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewElement"
+        android:layout_alignLeft="@+id/magie"
+        android:layout_alignStart="@+id/magie"
+        android:id="@+id/textViewMagie" />
+
+
+    <TextView
+        android:text="@string/typeLumiere"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewElement"
+        android:layout_alignLeft="@+id/lumiere"
+        android:layout_alignStart="@+id/lumiere"
+        android:id="@+id/textViewLumiere" />
+
+    <TextView
+        android:text="@string/typeNature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewNature"
         android:layout_below="@+id/special"
         android:layout_alignLeft="@+id/special"
         android:layout_alignStart="@+id/special" />
+
+    <TextView
+        android:text="@string/typeSpecial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewSpecial"
+        android:layout_below="@+id/textViewElement"
+        android:layout_alignLeft="@+id/special"
+        android:layout_alignStart="@+id/special" />
+
+    <TextView
+        android:text="@string/typeMetal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewMetal"
+        android:layout_below="@+id/magie"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="@string/typeTerre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textViewMetal"
+        android:layout_alignLeft="@+id/lumiere"
+        android:layout_alignStart="@+id/lumiere"
+        android:id="@+id/textViewTerre" />
+
+    <TextView
+        android:text="@string/typeEau"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nature"
+        android:layout_alignLeft="@+id/nature"
+        android:layout_alignStart="@+id/nature"
+        android:id="@+id/textViewEau" />
+
+    <TextView
+        android:text="@string/typeFoudre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewFoudre"
+        android:layout_below="@+id/metal"
+        android:layout_alignLeft="@+id/metal"
+        android:layout_alignStart="@+id/metal" />
+
+    <TextView
+        android:text="@string/typeFeu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/terre"
+        android:layout_alignLeft="@+id/feu"
+        android:layout_alignStart="@+id/feu"
+        android:id="@+id/textViewFeu" />
+
+    <TextView
+        android:text="@string/typeMort"
+        android:textColor="#f0f3f5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/eau"
+        android:layout_alignLeft="@+id/eau"
+        android:layout_alignStart="@+id/eau"
+        android:id="@+id/textViewMort" />
+
+    <ImageButton
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:srcCompat="@drawable/metalxl"
+        android:id="@+id/metal"
+        android:onClick="onClick"
+        android:layout_alignTop="@+id/nature"
+        android:layout_alignLeft="@+id/magie"
+        android:layout_alignStart="@+id/magie" />
+
+    <ImageButton
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:srcCompat="@drawable/naturexl"
+        android:id="@+id/nature"
+        android:onClick="onClick"
+        android:layout_below="@+id/textViewNature"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignStart="@+id/textView3" />
+
+    <ImageButton
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:srcCompat="@drawable/mortxl"
+        android:id="@+id/mort"
+        android:onClick="onClick"
+        android:layout_below="@+id/textViewMort"
+        android:layout_alignLeft="@+id/textViewMort"
+        android:layout_alignStart="@+id/textViewMort" />
+    />
 
 
 </RelativeLayout>

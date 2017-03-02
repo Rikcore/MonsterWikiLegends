@@ -2,11 +2,13 @@ package wildentertainmentsas.monsterwikilegends;
 
 import android.content.Intent;
 import android.media.Image;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -48,6 +50,7 @@ public class VisualiserMonstres extends AppCompatActivity {
         TextView textViewStamina = (TextView) findViewById(R.id.textViewStamina);
         TextView textViewPower = (TextView) findViewById(R.id.textViewPower);
         TextView textViewSpeed = (TextView)findViewById(R.id.textViewSpeed);
+        RelativeLayout layout =(RelativeLayout)findViewById(R.id.activity_visualiser_monstres);
 
         Intent godetails = getIntent();
         Monstres obj = godetails.getParcelableExtra("obj");
@@ -57,6 +60,9 @@ public class VisualiserMonstres extends AppCompatActivity {
             imageViewMonster.setImageResource(R.drawable.firesaur_1_burned);
             imageViewElement.setImageResource(R.drawable.feu);
             textViewNomOriginal.setText(getString(Firesaur));
+            layout.setBackgroundResource(R.drawable.backgroundfire);
+
+
         }
         if (obj.getElement().equals("Magie")){
             imageViewMonster.setImageResource(R.drawable.genie_1_burned);
@@ -72,6 +78,7 @@ public class VisualiserMonstres extends AppCompatActivity {
             imageViewMonster.setImageResource(R.drawable.mersnake_1_burned);
             imageViewElement.setImageResource(R.drawable.eau);
             textViewNomOriginal.setText(getString(Eau));
+            layout.setBackgroundResource(R.drawable.backgroundwater);
         }
         if (obj.getElement().equals("Nature")){
             imageViewMonster.setImageResource(R.drawable.treezard_1_burned);
@@ -79,7 +86,7 @@ public class VisualiserMonstres extends AppCompatActivity {
             textViewNomOriginal.setText(getString(Nature));
         }
         if (obj.getElement().equals("Mort")){
-            imageViewMonster.setImageResource(R.drawable.tyrannoking_1);
+            imageViewMonster.setImageResource(R.drawable.tyrannoking_1_burned);
             imageViewElement.setImageResource(R.drawable.mort);
             textViewNomOriginal.setText(getString(Mort));
         }

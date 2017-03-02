@@ -2,6 +2,7 @@ package wildentertainmentsas.monsterwikilegends;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -32,13 +33,18 @@ public class Creation2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_creation2);
+
+        Typeface Chantelli = Typeface.createFromAsset(getAssets(),"fonts/Chantelli_Antiqua.ttf");
+
         TextView textView = (TextView) findViewById(R.id.textView);
+        textView.setTypeface(Chantelli);
         ImageView imageView = (ImageView) findViewById(R.id.imageView);
         final EditText editTextLife = (EditText) findViewById(R.id.editTextLife);
         final EditText editTextStamina = (EditText) findViewById(R.id.editTextStamina);
         final EditText editTextPower = (EditText) findViewById(R.id.editTextPower);
         final EditText editTextSpeed = (EditText) findViewById(R.id.editTextSpeed);
         Button valider = (Button) findViewById(R.id.valider);
+        valider.setTypeface(Chantelli);
 
         Intent continueCreation = getIntent();
         final String name = continueCreation.getStringExtra("name");
