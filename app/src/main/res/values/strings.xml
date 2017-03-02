@@ -12,6 +12,15 @@
     <string name="forcestats">Tu dois donner des points à chaque catégorie.</string>
     <string name="felicitations">Monstre enregistré BITCH !!!</string>
     <string name="forcercreation">Tu dois d\'abord créer ton premier monstre !</string>
-    <string name="detype"></string>
+    <string name="Firesaur">- Firesaur -</string>
+    <string name="Genie">- Genie -</string>
+    <string name="Lumiere">- Lumiere -</string>
+    <string name="Eau">- Eau -</string>
+    <string name="Nature">- Nature -</string>
+    <string name="Metal">- Metal -</string>
+    <string name="Mort">- Mort -</string>
+    <string name="Terre">- Terre -</string>
+    <string name="Foudre">- Foudre -</string>
+    <string name="Special">- Special -</string>
 
 </resources>

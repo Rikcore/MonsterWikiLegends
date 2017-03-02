@@ -1,29 +1,123 @@
 package wildentertainmentsas.monsterwikilegends;
 
 import android.content.Intent;
+import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import org.w3c.dom.Text;
+
+import java.util.Objects;
+
+import static wildentertainmentsas.monsterwikilegends.R.string.Eau;
+import static wildentertainmentsas.monsterwikilegends.R.string.Firesaur;
+import static wildentertainmentsas.monsterwikilegends.R.string.Foudre;
+import static wildentertainmentsas.monsterwikilegends.R.string.Genie;
+import static wildentertainmentsas.monsterwikilegends.R.string.Lumiere;
+import static wildentertainmentsas.monsterwikilegends.R.string.Metal;
+import static wildentertainmentsas.monsterwikilegends.R.string.Mort;
+import static wildentertainmentsas.monsterwikilegends.R.string.Nature;
+import static wildentertainmentsas.monsterwikilegends.R.string.Special;
+import static wildentertainmentsas.monsterwikilegends.R.string.Terre;
+import static wildentertainmentsas.monsterwikilegends.R.string.element;
 
 public class VisualiserMonstres extends AppCompatActivity {
 
     Button retour;
-    TextView textview2;
-    String name;
+    ImageView imageViewMonster;
+    ImageView imageViewElement;
+    TextView textViewNomOriginal;
+    TextView textViewLife;
+    TextView textViewStamina;
+    TextView textViewPower;
+    TextView textViewSpeed;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_visualiser_monstres);
-        textview2 = (TextView) findViewById(R.id.textView2);
+        ImageView imageViewMonster = (ImageView)findViewById(R.id.imageViewMonster);
+        ImageView imageViewElement = (ImageView)findViewById(R.id.imageViewElement);
+        TextView textViewNomOriginal = (TextView) findViewById(R.id.textViewNomOriginal);
+        TextView textViewLife = (TextView) findViewById(R.id.textViewLife);
+        TextView textViewStamina = (TextView) findViewById(R.id.textViewStamina);
+        TextView textViewPower = (TextView) findViewById(R.id.textViewPower);
+        TextView textViewSpeed = (TextView)findViewById(R.id.textViewSpeed);
+
         Intent godetails = getIntent();
-        Monstres obj = (Monstres) godetails.getParcelableExtra("obj");
+        Monstres obj = godetails.getParcelableExtra("obj");
+
+        setTitle(obj.getName());
+        if (obj.getElement().equals("Feu")) {
+            imageViewMonster.setImageResource(R.drawable.firesaur_1_burned);
+            imageViewElement.setImageResource(R.drawable.feu);
+            textViewNomOriginal.setText(getString(Firesaur));
+        }
+        if (obj.getElement().equals("Magie")){
+            imageViewMonster.setImageResource(R.drawable.genie_1_burned);
+            imageViewElement.setImageResource(R.drawable.magie);
+            textViewNomOriginal.setText(getString(Genie));
+        }
+        if (obj.getElement().equals("Lumiere")){
+            imageViewMonster.setImageResource(R.drawable.light_spirit_1_burned);
+            imageViewElement.setImageResource(R.drawable.lumiere);
+            textViewNomOriginal.setText(getString(Lumiere));
+        }
+        if (obj.getElement().equals("Eau")){
+            imageViewMonster.setImageResource(R.drawable.mersnake_1_burned);
+            imageViewElement.setImageResource(R.drawable.eau);
+            textViewNomOriginal.setText(getString(Eau));
+        }
+        if (obj.getElement().equals("Nature")){
+            imageViewMonster.setImageResource(R.drawable.treezard_1_burned);
+            imageViewElement.setImageResource(R.drawable.nature);
+            textViewNomOriginal.setText(getString(Nature));
+        }
+        if (obj.getElement().equals("Mort")){
+            imageViewMonster.setImageResource(R.drawable.tyrannoking_1);
+            imageViewElement.setImageResource(R.drawable.mort);
+            textViewNomOriginal.setText(getString(Mort));
+        }
+        if (obj.getElement().equals("Terre")){
+            imageViewMonster.setImageResource(R.drawable.rockilla_1_burned);
+            imageViewElement.setImageResource(R.drawable.terre);
+            textViewNomOriginal.setText(getString(Terre));
+        }
+        if (obj.getElement().equals("Foudre")){
+            imageViewMonster.setImageResource(R.drawable.thunder_eagle_1_burned);
+            imageViewElement.setImageResource(R.drawable.foudre);
+            textViewNomOriginal.setText(getString(Foudre));
+        }
+        if (obj.getElement().equals("Special")){
+            imageViewMonster.setImageResource(R.drawable.monster_clutch_1_burned);
+            imageViewElement.setImageResource(R.drawable.special);
+            textViewNomOriginal.setText(getString(Special));
+        }
+        if (obj.getElement().equals("Metal")){
+            imageViewMonster.setImageResource(R.drawable.metalsaur_1_burned);
+            imageViewElement.setImageResource(R.drawable.metal);
+            textViewNomOriginal.setText(getString(Metal));
+        }
 
 
-        textview2.setText(obj.getName());
+
+        textViewLife.setText(obj.getLife());
+        textViewStamina.setText(obj.getStamina());
+        textViewPower.setText(obj.getPower());
+        textViewSpeed.setText(obj.getSpeed());
+
+
+
+
+
+
+
+
 
 
 
@@ -32,7 +126,7 @@ public class VisualiserMonstres extends AppCompatActivity {
         retour.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(VisualiserMonstres.this, Accueil.class));
+                finish();
             }
         });
     }
