@@ -1,6 +1,7 @@
 package wildentertainmentsas.monsterwikilegends;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.media.Image;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -68,11 +69,13 @@ public class VisualiserMonstres extends AppCompatActivity {
             imageViewMonster.setImageResource(R.drawable.genie_1_burned);
             imageViewElement.setImageResource(R.drawable.magie);
             textViewNomOriginal.setText(getString(Genie));
+            layout.setBackgroundResource(R.drawable.backgroundmagie);
         }
         if (obj.getElement().equals("Lumiere")){
             imageViewMonster.setImageResource(R.drawable.light_spirit_1_burned);
             imageViewElement.setImageResource(R.drawable.lumiere);
             textViewNomOriginal.setText(getString(Lumiere));
+            layout.setBackgroundResource(R.drawable.backgroundlumiere);
         }
         if (obj.getElement().equals("Eau")){
             imageViewMonster.setImageResource(R.drawable.mersnake_1_burned);
@@ -84,31 +87,39 @@ public class VisualiserMonstres extends AppCompatActivity {
             imageViewMonster.setImageResource(R.drawable.treezard_1_burned);
             imageViewElement.setImageResource(R.drawable.nature);
             textViewNomOriginal.setText(getString(Nature));
+            layout.setBackgroundResource(R.drawable.backgroundnature);
         }
         if (obj.getElement().equals("Mort")){
             imageViewMonster.setImageResource(R.drawable.tyrannoking_1_burned);
             imageViewElement.setImageResource(R.drawable.mort);
             textViewNomOriginal.setText(getString(Mort));
+            layout.setBackgroundResource(R.drawable.backgroundmort);
+            textViewNomOriginal.setTextColor(Color.parseColor("#EFEDE5"));
         }
         if (obj.getElement().equals("Terre")){
             imageViewMonster.setImageResource(R.drawable.rockilla_1_burned);
             imageViewElement.setImageResource(R.drawable.terre);
             textViewNomOriginal.setText(getString(Terre));
+            layout.setBackgroundResource(R.drawable.backgroundterre);
         }
         if (obj.getElement().equals("Foudre")){
             imageViewMonster.setImageResource(R.drawable.thunder_eagle_1_burned);
             imageViewElement.setImageResource(R.drawable.foudre);
             textViewNomOriginal.setText(getString(Foudre));
+            layout.setBackgroundResource(R.drawable.backgroundthunder);
+            textViewNomOriginal.setTextColor(Color.parseColor("#ECD330"));
         }
         if (obj.getElement().equals("Special")){
             imageViewMonster.setImageResource(R.drawable.monster_clutch_1_burned);
             imageViewElement.setImageResource(R.drawable.special);
             textViewNomOriginal.setText(getString(Special));
+            layout.setBackgroundResource(R.drawable.backgroundspecial);
         }
         if (obj.getElement().equals("Metal")){
             imageViewMonster.setImageResource(R.drawable.metalsaur_1_burned);
             imageViewElement.setImageResource(R.drawable.metal);
             textViewNomOriginal.setText(getString(Metal));
+            layout.setBackgroundResource(R.drawable.backgroundmetal);
         }
 
 
