@@ -22,18 +22,6 @@
         android:layout_marginTop="33dp"
         android:id="@+id/textView" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:layout_alignBottom="@+id/imageView2"
-        android:layout_toRightOf="@+id/imageView2"
-        android:layout_toEndOf="@+id/imageView2"
-        android:id="@+id/editTextLife"
-        android:hint="@string/Vie"
-        android:gravity="center_horizontal"
-        android:maxLength="3"/>
 
     <ImageView
         android:layout_width="wrap_content"
@@ -45,19 +33,6 @@
         android:layout_alignStart="@+id/imageView2"
         android:layout_marginTop="11dp" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:layout_alignBottom="@+id/imageViewStamina"
-        android:layout_toRightOf="@+id/imageView2"
-        android:layout_toEndOf="@+id/imageView2"
-        android:id="@+id/editTextStamina"
-        android:hint="@string/Stamina"
-        android:gravity="center_horizontal"
-        android:maxLength="3"
-        />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -69,18 +44,6 @@
         android:layout_marginTop="13dp"
         android:id="@+id/imageViewPower" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:layout_alignTop="@+id/imageViewPower"
-        android:layout_alignLeft="@+id/editTextStamina"
-        android:layout_alignStart="@+id/editTextStamina"
-        android:id="@+id/editTextPower"
-        android:hint="@string/Puissance"
-        android:gravity="center_horizontal"
-        android:maxLength="3"/>
 
     <ImageView
         android:layout_width="wrap_content"
@@ -92,18 +55,6 @@
         android:layout_marginTop="11dp"
         android:id="@+id/imageViewSpeed" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:layout_alignTop="@+id/imageViewSpeed"
-        android:layout_alignLeft="@+id/editTextPower"
-        android:layout_alignStart="@+id/editTextPower"
-        android:id="@+id/editTextSpeed"
-        android:hint="@string/Vitesse"
-        android:gravity="center_horizontal"
-        android:maxLength="3"/>
 
     <ImageView
         android:layout_width="wrap_content"
@@ -142,5 +93,79 @@
         android:paddingRight="20dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageView2"
+        android:layout_toRightOf="@+id/imageView2"
+        android:layout_marginTop="11dp"
+        android:id="@+id/seekBarLife"
+        android:layout_alignRight="@+id/textView"
+        android:layout_alignEnd="@+id/textView" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBarStamina"
+        android:layout_above="@+id/imageViewPower"
+        android:layout_toRightOf="@+id/imageView2"
+        android:layout_marginBottom="11dp"
+        android:layout_alignRight="@+id/seekBarLife"
+        android:layout_alignEnd="@+id/seekBarLife" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBarSpeed"
+        android:layout_alignBottom="@+id/imageViewSpeed"
+        android:layout_alignLeft="@+id/seekBarPower"
+        android:layout_alignStart="@+id/seekBarPower"
+        android:layout_marginBottom="11dp"
+        android:layout_alignRight="@+id/seekBarPower"
+        android:layout_alignEnd="@+id/seekBarPower" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBarPower"
+        android:layout_alignTop="@+id/imageViewPower"
+        android:layout_alignLeft="@+id/seekBarStamina"
+        android:layout_alignStart="@+id/seekBarStamina"
+        android:layout_marginTop="12dp"
+        android:layout_alignRight="@+id/seekBarStamina"
+        android:layout_alignEnd="@+id/seekBarStamina" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextLife"
+        android:layout_above="@+id/imageViewStamina"
+        android:layout_alignRight="@+id/seekBarLife"
+        android:layout_alignEnd="@+id/seekBarLife" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextStamina"
+        android:layout_above="@+id/imageViewPower"
+        android:layout_alignRight="@+id/seekBarStamina"
+        android:layout_alignEnd="@+id/seekBarStamina" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextPower"
+        android:layout_below="@+id/seekBarPower"
+        android:layout_alignRight="@+id/seekBarPower"
+        android:layout_alignEnd="@+id/seekBarPower" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextSpeed"
+        android:layout_alignBottom="@+id/imageViewSpeed"
+        android:layout_alignRight="@+id/seekBarSpeed"
+        android:layout_alignEnd="@+id/seekBarSpeed" />
 
 </RelativeLayout>
