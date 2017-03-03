@@ -11,20 +11,30 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.SeekBar;
+
 
 import static android.R.attr.breadCrumbShortTitle;
 import static android.R.attr.name;
 import static wildentertainmentsas.monsterwikilegends.R.id.image;
 import static wildentertainmentsas.monsterwikilegends.R.id.imageView;
+import static wildentertainmentsas.monsterwikilegends.R.id.seekBarPower;
+import static wildentertainmentsas.monsterwikilegends.R.id.seekBarSpeed;
 
 
 public class Creation2 extends AppCompatActivity {
 
     TextView textView;
-    EditText editTextLife;
+
+
+
+    TextView editTextLife ;
     EditText editTextStamina;
     EditText editTextPower;
     EditText editTextSpeed;
+
+
+
 
 
 
@@ -34,11 +44,104 @@ public class Creation2 extends AppCompatActivity {
         setContentView(R.layout.activity_creation2);
         TextView textView = (TextView) findViewById(R.id.textView);
         ImageView imageView = (ImageView) findViewById(R.id.imageView);
-        final EditText editTextLife = (EditText) findViewById(R.id.editTextLife);
+        /*final EditText editTextLife = (EditText) findViewById(R.id.editTextLife);
         final EditText editTextStamina = (EditText) findViewById(R.id.editTextStamina);
         final EditText editTextPower = (EditText) findViewById(R.id.editTextPower);
-        final EditText editTextSpeed = (EditText) findViewById(R.id.editTextSpeed);
+        final EditText editTextSpeed = (EditText) findViewById(R.id.editTextSpeed); */
         Button valider = (Button) findViewById(R.id.valider);
+
+        final SeekBar seekBarLife = (SeekBar)findViewById(R.id.seekBarLife);
+        final TextView seekBarValue1 = (TextView)findViewById(R.id.editTextLife);
+
+        final SeekBar seekBarStamina = (SeekBar)findViewById(R.id.seekBarStamina);
+        final TextView seekBarValue2 = (TextView)findViewById(R.id.editTextStamina);
+
+        final SeekBar seekBarPower = (SeekBar)findViewById(R.id.seekBarPower);
+        final TextView seekBarValue3 = (TextView)findViewById(R.id.editTextPower);
+
+        final SeekBar seekBarSpeed = (SeekBar)findViewById(R.id.seekBarSpeed);
+        final TextView seekBarValue4 = (TextView)findViewById(R.id.editTextSpeed);
+
+
+        seekBarLife.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+
+                                                   @Override
+                                                   public void onProgressChanged(SeekBar seekBar, int progress,
+                                                                                 boolean fromUser) {
+                                                       // TODO Auto-generated method stub
+                                                       seekBarValue1.setText(String.valueOf(progress));
+                                                   }
+
+                                                   @Override
+                                                   public void onStartTrackingTouch(SeekBar seekBar) {
+
+                                                   }
+
+                                                   @Override
+                                                   public void onStopTrackingTouch(SeekBar seekBar) {
+
+                                                   }
+                                               });
+
+        seekBarStamina.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress,
+                                          boolean fromUser) {
+                // TODO Auto-generated method stub
+                seekBarValue2.setText(String.valueOf(progress));
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+
+        seekBarPower.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress,
+                                          boolean fromUser) {
+                // TODO Auto-generated method stub
+                seekBarValue3.setText(String.valueOf(progress));
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+
+        seekBarSpeed.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress,
+                                          boolean fromUser) {
+                // TODO Auto-generated method stub
+                seekBarValue4.setText(String.valueOf(progress));
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
 
         Intent continueCreation = getIntent();
         final String name = continueCreation.getStringExtra("name");
@@ -86,18 +189,26 @@ public class Creation2 extends AppCompatActivity {
 
 
 
-        valider.setOnClickListener(new View.OnClickListener() {
+
+
+
+
+
+
+
+
+       valider.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-                if (editTextLife.length()==0 || editTextPower.length()==0 || editTextSpeed.length()==0 || editTextStamina.length()==0){
+                if ( seekBarValue1.length()== 0 || seekBarValue2.length()==0 || seekBarValue3.length()==0 || seekBarValue4.length()==0){
                     Toast.makeText(Creation2.this, getString(R.string.forcestats),
                             Toast.LENGTH_LONG).show();
                 }
                 else {
-                    String stamina = editTextStamina.getText().toString();
-                    String life = editTextLife.getText().toString();
-                    String power = editTextPower.getText().toString();
-                    String speed = editTextSpeed.getText().toString();
+                    String stamina = seekBarValue2.getText().toString();
+                    String life = seekBarValue1.getText().toString();
+                    String power = seekBarValue3.getText().toString();
+                    String speed = seekBarValue4.getText().toString();
                     versBestiaireTotal.putExtra("name", name);
                     versBestiaireTotal.putExtra("element", element);
                     versBestiaireTotal.putExtra("life", life);
@@ -120,6 +231,17 @@ public class Creation2 extends AppCompatActivity {
 
 
         }
+
+
+
+
+
+
+
+
+
+
+
 
     }
 
