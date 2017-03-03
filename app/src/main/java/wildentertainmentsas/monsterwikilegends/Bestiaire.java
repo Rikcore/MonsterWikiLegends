@@ -1,6 +1,7 @@
 package wildentertainmentsas.monsterwikilegends;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -12,7 +13,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
-
+import static wildentertainmentsas.monsterwikilegends.R.string.element;
 
 
 public class Bestiaire extends AppCompatActivity {
@@ -28,7 +29,11 @@ public class Bestiaire extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bestiaire);
 
+
         retour = (Button) findViewById(R.id.retour);
+        Typeface Chantelli = Typeface.createFromAsset(getAssets(),"fonts/Chantelli_Antiqua.ttf");
+        retour.setTypeface(Chantelli);
+
 
         Intent bestiairetotal = getIntent();
 
@@ -57,10 +62,12 @@ public class Bestiaire extends AppCompatActivity {
         bestiaireListView = (ListView) findViewById(R.id.bestiaireListView);
         this.bestiaireListView.setAdapter(this.arrayadapter);
 
+
         retour.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                Intent menuPrincipal = new Intent(Bestiaire.this,Accueil.class);
+                startActivity(menuPrincipal);
             }
         });
 
@@ -69,12 +76,11 @@ public class Bestiaire extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Monstres obj = (Monstres) arrayadapter.getItem(position);
 
+
+
                 Intent godetails = new Intent(Bestiaire.this, VisualiserMonstres.class);
                 godetails.putExtra("obj",obj);
                 startActivity(godetails);
-
-
-
 
 
 
@@ -82,9 +88,6 @@ public class Bestiaire extends AppCompatActivity {
         });
 
         }
-
-
-
 
 
     @Override

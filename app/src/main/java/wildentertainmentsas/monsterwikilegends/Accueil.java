@@ -1,19 +1,17 @@
 package wildentertainmentsas.monsterwikilegends;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import static wildentertainmentsas.monsterwikilegends.R.id.activity_accueil;
-import static wildentertainmentsas.monsterwikilegends.R.id.creer;
 
 public class Accueil extends AppCompatActivity {
 
     Button creer;
     Button liste;
-    Button quitter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +20,12 @@ public class Accueil extends AppCompatActivity {
 
         creer = (Button) findViewById(R.id.creer);
         liste = (Button) findViewById(R.id.liste);
+
+        Typeface Chantelli = Typeface.createFromAsset(getAssets(),"fonts/Chantelli_Antiqua.ttf");
+        creer.setTypeface(Chantelli);
+        liste.setTypeface(Chantelli);
+
+
 
 
 

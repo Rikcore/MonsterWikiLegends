@@ -15,18 +15,17 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/imageViewStamina"
-        android:layout_toRightOf="@+id/imageViewLife"
-        android:layout_toEndOf="@+id/imageViewLife"
-        android:id="@+id/textViewStamina" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/imageViewPower"
         android:layout_alignLeft="@+id/textViewStamina"
         android:layout_alignStart="@+id/textViewStamina"
-        android:id="@+id/textViewPower" />
+        android:id="@+id/textViewPower"
+        android:background="@drawable/rounded_corner"
+        android:textColor="#2c3028"
+        android:textSize="20dp"
+
+
+
+        android:text="gfhgfhfh" />
 
     <Button
         android:layout_width="wrap_content"
@@ -49,9 +48,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textViewSpeed"
+        android:textSize="20dp"
         android:layout_alignBottom="@+id/imageViewSpeed"
         android:layout_alignLeft="@+id/retour"
-        android:layout_alignStart="@+id/retour" />
+        android:layout_alignStart="@+id/retour"
+        android:text="sqddsqdsq"
+        android:background="@drawable/rounded_corner"
+        />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -71,57 +74,71 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/stat_speed"
-        android:id="@+id/imageViewSpeed"
-        android:layout_above="@+id/retour"
-        android:layout_alignLeft="@+id/imageViewPower"
-        android:layout_alignStart="@+id/imageViewPower"
-        android:layout_marginBottom="23dp" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/stat_power"
-        android:id="@+id/imageViewPower"
-        android:layout_above="@+id/imageViewSpeed"
-        android:layout_alignLeft="@+id/imageViewStamina"
-        android:layout_alignStart="@+id/imageViewStamina" />
+        app:srcCompat="@drawable/stat_life"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp"
+        android:id="@+id/imageViewLife"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/textViewSpeed"
+        android:layout_toStartOf="@+id/textViewSpeed" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/stat_stamina"
         android:id="@+id/imageViewStamina"
-        android:layout_above="@+id/textViewPower"
+        android:layout_below="@+id/imageViewLife"
         android:layout_alignLeft="@+id/imageViewLife"
-        android:layout_alignStart="@+id/imageViewLife"
-        android:layout_marginBottom="17dp" />
+        android:layout_alignStart="@+id/imageViewLife" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/stat_life"
-        android:layout_marginRight="18dp"
-        android:layout_marginEnd="18dp"
-        android:id="@+id/imageViewLife"
-        android:layout_above="@+id/imageViewStamina"
-        android:layout_toLeftOf="@+id/textViewSpeed"
-        android:layout_toStartOf="@+id/textViewSpeed" />
+        app:srcCompat="@drawable/stat_power"
+        android:id="@+id/imageViewPower"
+        android:layout_below="@+id/imageViewStamina"
+        android:layout_alignLeft="@+id/imageViewStamina"
+        android:layout_alignStart="@+id/imageViewStamina" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/stat_speed"
+        android:id="@+id/imageViewSpeed"
+        android:layout_below="@+id/imageViewPower"
+        android:layout_alignLeft="@+id/imageViewPower"
+        android:layout_alignStart="@+id/imageViewPower" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewStamina"
+        android:background="@drawable/rounded_corner"
+        android:textSize="20dp"
+        android:text="zaezeza"
+        android:layout_above="@+id/imageViewPower"
+        android:layout_alignLeft="@+id/textViewSpeed"
+        android:layout_alignStart="@+id/textViewSpeed" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textViewLife"
+        android:background="@drawable/rounded_corner"
+        android:textSize="20dp"
+        android:text="sqdsqdsqd"
         android:layout_above="@+id/imageViewStamina"
         android:layout_alignLeft="@+id/textViewStamina"
         android:layout_alignStart="@+id/textViewStamina" />
 
     <TextView
-        android:text="TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textViewNomOriginal"
+        android:textSize="25dp"
+        android:text="dsfdsfdsfds"
         android:layout_below="@+id/imageViewMonster"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" />
 
 </RelativeLayout>

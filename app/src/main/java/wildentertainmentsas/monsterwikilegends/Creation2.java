@@ -2,6 +2,7 @@ package wildentertainmentsas.monsterwikilegends;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -42,13 +43,18 @@ public class Creation2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_creation2);
+
+        Typeface Chantelli = Typeface.createFromAsset(getAssets(),"fonts/Chantelli_Antiqua.ttf");
+
         TextView textView = (TextView) findViewById(R.id.textView);
+        textView.setTypeface(Chantelli);
         ImageView imageView = (ImageView) findViewById(R.id.imageView);
         /*final EditText editTextLife = (EditText) findViewById(R.id.editTextLife);
         final EditText editTextStamina = (EditText) findViewById(R.id.editTextStamina);
         final EditText editTextPower = (EditText) findViewById(R.id.editTextPower);
         final EditText editTextSpeed = (EditText) findViewById(R.id.editTextSpeed); */
         Button valider = (Button) findViewById(R.id.valider);
+        valider.setTypeface(Chantelli);
 
         final SeekBar seekBarLife = (SeekBar)findViewById(R.id.seekBarLife);
         final TextView seekBarValue1 = (TextView)findViewById(R.id.editTextLife);
@@ -157,7 +163,7 @@ public class Creation2 extends AppCompatActivity {
                 imageView.setImageResource(R.drawable.thunder_eagle_0);
                 break;
             case 2:
-                imageView.setImageResource(R.drawable.fire_lion_0);
+                imageView.setImageResource(R.drawable.firesaur_0);
                 break;
             case 3:
                 imageView.setImageResource(R.drawable.turtle_0);

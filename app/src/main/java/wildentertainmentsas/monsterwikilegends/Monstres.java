@@ -52,7 +52,7 @@ public class Monstres implements Parcelable {
 
     public String toString(){
 
-        return this.name + " // Type : " +  this.element;
+        return this.name + "    Type : " +  this.element;
     }
 
     public String getName() {
